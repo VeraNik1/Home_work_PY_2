@@ -9,18 +9,18 @@
 # 2
 
 
-# import random as r
-# while True:
-#     try:
-#         n = int(input('Введите количество монет: '))
-#         if n <= 0:
-#             raise Exception
-#         coins = [r.randrange(0, 2) for i in range(n)]
-#         print('выпали такие монетки:', *coins)
-#         print(f'минимальное количество монет, которое нужно перевернуть: {min(coins.count(1), coins.count(0))}')
-#         break
-#     except:
-#         print("Вы ввели некорректное значение, попробуйте еще раз")
+import random as r
+while True:
+    try:
+        n = int(input('Введите количество монет: '))
+        if n <= 0:
+            raise Exception
+        coins = [r.randrange(0, 2) for i in range(n)]
+        print('выпали такие монетки:', *coins)
+        print(f'минимальное количество монет, которое нужно перевернуть: {min(coins.count(1), coins.count(0))}')
+        break
+    except:
+        print("Вы ввели некорректное значение, попробуйте еще раз")
 
 
 
@@ -57,10 +57,18 @@ while True:
         print("Вы ввели некорректное значение суммы или произведения, попробуйте еще раз")
 
 
-
-
-
-
-
 # Задача 14
 # Требуется вывести все целые степени двойки (т.е. числа вида 2k), не превосходящие числа N.
+
+while True:
+    try:
+        N = int(input('Введите натуральное число: '))
+        if N <= 0:
+             raise Exception
+        start = 1 #значение 2 в 0 степени вроде бы целое число)
+        while start <= N:
+            print(start, end = ' ')
+            start *= 2 
+        break
+    except:
+        print("Вы ввели некорректное значение, попробуйте еще раз")       
